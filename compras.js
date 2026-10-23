@@ -29,19 +29,43 @@ class Producto {
   }
 }
 
+/**
+ * Representa el carret de la compra: la llista de productes que vol comprar un usuari.
+ * @class
+ */
 class Carrito {
+  /**
+   * Crea un carret buit.
+   */
   constructor() {
+    /** @type {Producto[]} Productes afegits al carret. */
     this.productos = [];
   }
 
+  /**
+   * Afegeix un producte al final del carret.
+   * @param {Producto} producto - El producte que s'afegeix.
+   * @returns {void}
+   */
   agregarProducto(producto) {
     this.productos.push(producto);
   }
 
+  /**
+   * Calcula el preu total del carret sumant el total de cada producte.
+   * @returns {number} La suma de tots els productes, en euros (0 si el carret és buit).
+   * @example
+   * // Laptop (1200 × 1) + Mouse (20 × 2)
+   * carrito.calcularTotalCarrito(); // 1240
+   */
   calcularTotalCarrito() {
     return this.productos.reduce((total, producto) => total + producto.calcularTotal(), 0);
   }
 
+  /**
+   * Buida el carret (elimina tots els productes).
+   * @returns {void}
+   */
   vaciarCarrito() {
     this.productos = [];
   }
