@@ -47,17 +47,41 @@ class Carrito {
   }
 }
 
+/**
+ * Representa la persona que compra a la botiga. Cada usuari té el seu propi carret.
+ * @class
+ */
 class Usuario {
+  /**
+   * Crea un usuari amb un carret buit.
+   * @param {string} nombre - Nom de l'usuari (p. ex. "Juan").
+   * @param {string} correo - Correu electrònic de l'usuari.
+   */
   constructor(nombre, correo) {
+    /** @type {string} Nom de l'usuari. */
     this.nombre = nombre;
+    /** @type {string} Correu electrònic de l'usuari. */
     this.correo = correo;
+    /** @type {Carrito} Carret propi de l'usuari; es crea buit. */
     this.carrito = new Carrito();
   }
 
+  /**
+   * Afegeix un producte al carret de l'usuari.
+   * @param {Producto} producto - El producte que es vol comprar.
+   * @returns {void}
+   */
   agregarProductoAlCarrito(producto) {
     this.carrito.agregarProducto(producto);
   }
 
+  /**
+   * Finalitza la compra: calcula el total del carret, el mostra per consola i buida el carret.
+   * @returns {void}
+   * @example
+   * // Mostra: Usuario Juan ha realizado una compra por un total de 1240€
+   * usuario.finalizarCompra();
+   */
   finalizarCompra() {
     const total = this.carrito.calcularTotalCarrito();
     console.log(`Usuario ${this.nombre} ha realizado una compra por un total de ${total}€`);
