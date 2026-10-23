@@ -1,10 +1,29 @@
+/**
+ * Representa un article de la botiga i quantes unitats se'n compren.
+ * @class
+ */
 class Producto {
+  /**
+   * Crea un producte.
+   * @param {string} nombre - Nom de l'article (p. ex. "Laptop").
+   * @param {number} precio - Preu d'una unitat, en euros.
+   * @param {number} cantidad - Nombre d'unitats que es compren.
+   */
   constructor(nombre, precio, cantidad) {
+    /** @type {string} Nom de l'article. */
     this.nombre = nombre;
+    /** @type {number} Preu d'una unitat, en euros. */
     this.precio = precio;
+    /** @type {number} Nombre d'unitats. */
     this.cantidad = cantidad;
   }
 
+  /**
+   * Calcula el preu total d'aquest producte.
+   * @returns {number} El preu unitari multiplicat per la quantitat, en euros.
+   * @example
+   * new Producto("Mouse", 20, 2).calcularTotal(); // 40
+   */
   calcularTotal() {
     return this.precio * this.cantidad;
   }
