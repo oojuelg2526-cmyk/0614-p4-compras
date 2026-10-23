@@ -41,5 +41,5 @@ Usuario Juan ha realizado una compra por un total de 1240€
 | Membre | Classe documentada |
 |---|---|
 | Óscar Ojuel González (creador del repositori) | `Producto` |
-| *[PENDENT]* | `Carrito` |
-| *[PENDENT]* | `Usuario` |
+| Alex Campano | `Carrito` |
+| Denys Plyvun | `Usuario` |
