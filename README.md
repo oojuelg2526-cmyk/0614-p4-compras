@@ -40,7 +40,5 @@ Usuario Juan ha realizado una compra por un total de 1240€
 ## Equip
 | Membre | Classe documentada |
 |---|---|
-| Óscar Ojuel González (creador del repositori) | `Producto` i `Usuario` |
-| Alex Campano | `Carrito` |
-
-L'equip és de dues persones: Óscar documenta també la classe `Usuario`.
+| Óscar Ojuel González (creador del repositori) | `Producto`, `Usuario` i `Carrito` |
+| Alex Campano | col·laborador del repositori |
